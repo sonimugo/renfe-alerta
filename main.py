@@ -1,5 +1,27 @@
 import time
 import requests
+import os
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import threading
+
+# ==========================================
+# MINI SERVIDOR WEB PARA ENGAÑAR A RENDER
+# ==========================================
+class DummyHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+        self.wfile.write(b"Bot Renfe activo y ejecutandose.")
+
+def run_dummy_server():
+    port = int(os.environ.get("PORT", 8080))
+    server = HTTPServer(('0.0.0.0', port), DummyHandler)
+    server.serve_forever()
+
+# Iniciar servidor web en un hilo secundario
+server_thread = threading.Thread(target=run_dummy_server, daemon=True)
+server_thread.start()
 
 # ==========================================
 # 1. TUS DATOS DE TELEGRAM
@@ -63,7 +85,7 @@ def consultar_renfe(origen, destino, fecha, hora):
 # BUCLE PRINCIPAL DE MONITORIZACIÓN
 # ==========================================
 if __name__ == "__main__":
-    print("🚀 Bot iniciado correctamente en PythonAnywhere.")
+    print("🚀 Bot iniciado correctamente en Render.")
     
     msg_inicio = (
         f"🤖 *Bot de Renfe Activado (Servidor Nube)*\n\n"
