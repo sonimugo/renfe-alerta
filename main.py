@@ -31,8 +31,8 @@ TELEGRAM_CHAT_ID = "8819982474"
 # ==========================================
 # 2. FECHAS DEL VIAJE (DD/MM/AAAA)
 # ==========================================
-FECHA_IDA = "29/09/2026"
-FECHA_VUELTA = "29/09/2026"
+FECHA_IDA = "30/09/2026"
+FECHA_VUELTA = "30/09/2026"
 
 # ==========================================
 # 3. DATOS FIJOS Y CÓDIGOS DE ESTACIÓN
@@ -44,7 +44,7 @@ DESTINO_NOMBRE = "Sevilla-Santa Justa"
 CODIGO_CORDOBA = "50500"
 CODIGO_SEVILLA = "51200"
 
-HORA_IDA = "07:52"
+HORA_IDA = "06:20"
 HORA_VUELTA = "15:20"
 
 def enviar_alerta_telegram(mensaje):
@@ -53,7 +53,8 @@ def enviar_alerta_telegram(mensaje):
     payload = {
         'chat_id': TELEGRAM_CHAT_ID,
         'text': mensaje,
-        'parse_mode': 'Markdown'
+        'parse_mode': 'Markdown',
+        'disable_notification': False  # <--- Forzar sonido en iOS/Android
     }
     try:
         requests.post(url, data=payload, timeout=10)
