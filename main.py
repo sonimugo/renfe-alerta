@@ -33,7 +33,7 @@ TELEGRAM_CHAT_ID = "8819982474"
 # 2. FECHAS DEL VIAJE (MODIFICABLES)
 # ==========================================
 FECHA_IDA = "30/09/2026"
-FECHA_VUELTA = "30/09/2026"
+FECHA_VUELTA = "28/09/2026"
 
 # ==========================================
 # 3. DATOS FIJOS DEL TRAYECTO
