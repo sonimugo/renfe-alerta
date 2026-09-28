@@ -38,8 +38,8 @@ FECHA_VUELTA = "29/09/2026"
 # ==========================================
 # 3. DATOS FIJOS DEL TRAYECTO
 # ==========================================
-ORIGEN_IDA = "Córdoba"
-DESTINO_IDA = "Sevilla"
+ORIGEN_IDA = "CÓRDOBA-JULIO ANGUITA"
+DESTINO_IDA = "SEVILLA-SANTA JUSTA"
 
 HORA_IDA = "06:20"
 HORA_VUELTA = "15:20"
