@@ -25,7 +25,7 @@ server_thread.start()
 # ==========================================
 # 1. TUS DATOS DE TELEGRAM
 # ==========================================
-TELEGRAM_TOKEN = "8894503363:AAHPMXQYdOSA8JR_AAHcxMISCTORpZv5EaU"
+TELEGRAM_TOKEN = "8894503363:AAHPMXQYdOSA8JR_AAHcxMlSCTORpZv5EaU"
 TELEGRAM_CHAT_ID = "8819982474"
 
 # ==========================================
