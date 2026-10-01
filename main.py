@@ -32,7 +32,7 @@ TELEGRAM_CHAT_ID = "8819982474"
 # 2. FECHAS DEL VIAJE (DD/MM/AAAA)
 # ==========================================
 FECHA_IDA = "30/09/2026"
-FECHA_VUELTA = "30/09/2026"
+FECHA_VUELTA = "01/10/2026"
 
 # ==========================================
 # 3. DATOS FIJOS Y CÓDIGOS DE ESTACIÓN
